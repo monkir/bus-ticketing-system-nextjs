@@ -1,6 +1,8 @@
 
 import "tw-elements/dist/css/tw-elements.min.css";
 import 'flowbite';
+import 'flowbite-react'
+import 'react-icons'
 import "@/styles/globals.css";
 import { Roboto } from "next/font/google";
 
