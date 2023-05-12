@@ -13,7 +13,7 @@ export default function MyLayout(props)
   <Header title={props.title} />
   {/* <body> */}
     
-    <Image src="/ico.png" alt="me" width="64" height="64" />
+    {/* <Image src="/ico.png" alt="me" width="64" height="64" /> */}
     <Navbar
       fluid={true}
       rounded={true}
@@ -59,18 +59,18 @@ export default function MyLayout(props)
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-          <Navbar.Link active={true} href="/">
+          <Link href="/">
             Home
-          </Navbar.Link>
-          <Navbar.Link href="/about">
+          </Link>
+          <Link href="/about">
             About
-          </Navbar.Link>
-          <Navbar.Link href="/employee/manage-customer">
+          </Link>
+          <Link href="/employee/manage-customer">
             Manage Customer
-          </Navbar.Link>
-          <Navbar.Link href="/employee/manage-busowner">
+          </Link>
+          <Link href="/employee/manage-busowner">
             Manage Busowner
-          </Navbar.Link>
+          </Link>
       </Navbar.Collapse>
     </Navbar>
     
@@ -86,7 +86,7 @@ export default function MyLayout(props)
 
  
   <Link href="/about"> About US</Link>|
-  <a href="/employee/manage-customer"> Manage Customer</a>|
+  <Link href="/employee/manage-customer"> Manage Customer</Link>|
   <Link href="/employee/manage-busowner"> Manage Bus-owner</Link>|
   <Link href="#"> Manage Employee</Link>|
   <Link href="/employee/signup"> Emplyee signup</Link>|

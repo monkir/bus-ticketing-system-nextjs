@@ -22,6 +22,8 @@ export default function mngbusowners({data}) {
             <th>email</th>
             <th>phone</th>
             <th>address</th>
+            <th>account</th>
+            <th>brtalicense</th>
             <th colSpan={3}>Action</th>
             {/* <th>status</th> */}
           </tr>
@@ -33,9 +35,8 @@ export default function mngbusowners({data}) {
               <td>{item.email}</td>
               <td>{item.phone}</td>
               <td>{item.address}</td>
-              {/* <td>{item.account}</td>
-              <td>{item.address}</td>
-              <td>{item.address}</td> */}
+              <td>{item.account}</td>
+              <td>{item.brtalicense}</td>
               {/* <td>{item.profile}</td> */}
               <td><Link href={"/employee/manage-busowner/edituser/"+item.id}>Edit</Link></td>
               {/* <td><Link href={"#"}>Block</Link></td> */}

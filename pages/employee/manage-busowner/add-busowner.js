@@ -15,8 +15,8 @@ export default function addbusowners() {
     formData.append("email", data.email);
     formData.append("phone", data.phone);
     formData.append("address", data.address);
-    formData.append("account", data.address);
-    formData.append("brtalicense", data.address);
+    formData.append("account", data.account);
+    formData.append("brtalicense", data.brtalicense);
     formData.append("password", data.password);
     // formData.JSON=data;
     const content={
@@ -24,8 +24,8 @@ export default function addbusowners() {
       "email": data.email,
       "phone": data.phone,
       "address": data.address,
-      "account": data.address,
-      "brtalicense": data.address,
+      "account": data.account,
+      "brtalicense": data.brtalicense,
       "password": data.password
     }
 

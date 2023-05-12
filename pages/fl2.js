@@ -1,43 +1,42 @@
-import { Button, Modal, React } from "flowbite-react"
-import {HiOutlineExclamationCircle} from 'react-icons/hi'
-import { useState } from "react"
-export default function fl2(){
-  const [showModal, setShowModal]= useState(true);
-  return(
-<>
-  <Button onClick={()=>setShowModal(true)}>
-    Toggle modal
-  </Button>
-  <Modal
-    show={showModal}
-    size="md"
-    popup={true}
-    // onClose={onClose}
-  >
-    <Modal.Header />
-    <Modal.Body>
-      <div className="text-center">
-        <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
-        <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
-          Are you sure you want to delete this product?
-        </h3>
-        <div className="flex justify-center gap-4">
-          <Button
-            color="failure"
-            onClick={()=>setShowModal(false)}
-          >
-            Yes, I'm sure
-          </Button>
-          <Button
-            color="gray"
-            onClick={()=>setShowModal(false)}
-          >
-            No, cancel
-          </Button>
-        </div>
-      </div>
-    </Modal.Body>
-  </Modal>
-</>
-  )
-}
+// import MyLayout from "../component/layout"
+
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import axios from "axios";
+import { useRouter } from 'next/router';
+
+
+// <MyLayout title="logout"/>
+
+export default function Logout() {
+    const router = useRouter();
+    const [email, setEmail] = useState(null);
+    useEffect(() => {
+            const session = sessionStorage.getItem('email');
+            if (session) {
+            setEmail(sessionStorage.getItem('email')); 
+        }
+    });
+    const handleLogout = async () => {
+        try {
+            const response = await axios.get('http://localhost:3000/Seller/logout')
+            console.log(response.data)
+            sessionStorage.removeItem('email');
+            setEmail(null);
+            } 
+            catch (error) {
+            console.error(error)
+        }
+    };
+    handleLogout();
+    useEffect(() => {
+      if(email==null){
+        router.push('/') 
+      }
+    });
+    return (
+        <>
+        </>
+    );
+
+  }
