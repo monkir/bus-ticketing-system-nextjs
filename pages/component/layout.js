@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from 'next/image'
 import { Html } from "next/document"
 import { Navbar, Dropdown, Avatar } from "flowbite-react"
+import Poster from "./poster"
 
 export default function MyLayout(props)   
 {
@@ -78,6 +79,7 @@ export default function MyLayout(props)
     
   {/* </html> */}
 
+  {/* <Poster/> */}
 
 <Navbar.Link href="/">
   asdfsdf

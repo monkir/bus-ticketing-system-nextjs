@@ -1,13 +1,7 @@
-import dynamic from "next/dynamic";
-import { Modal } from "flowbite-react";
-
-const DynamicDatepicker = dynamic(() => import("./MyDatepicker"), { ssr: false });
-
-const Home = () => {
+export default function  Poster () {
   return (
     <>
-    <div >
-      {/* poster begin */}
+    {/* poster begin */}
     <div className=" flex justify-center">
       <div id="gallery" className="relative w-3/4" data-carousel="slide">
           {/* <!-- Carousel wrapper --> */}
@@ -50,12 +44,6 @@ const Home = () => {
 
     </div>
     {/* poster end */}
-
-      
-    </div>
- 
     </>
   );
 };
-
-export default Home;
