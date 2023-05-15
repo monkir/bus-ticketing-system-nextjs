@@ -1,13 +1,11 @@
-import MyLayout from "../../component/layout"
 import Link from "next/link"
 import axios from "axios"
 import React,{ useEffect, useState }  from "react"
 import Router from "next/router"
 import { Button, Modal} from "flowbite-react"
-import { Dismiss } from "flowbite"
-import { DismissOptions, DismissInterface } from "flowbite";
 import {HiOutlineExclamationCircle, HiInformationCircle} from 'react-icons/hi'
 import { useForm } from 'react-hook-form';
+import EmpLayout from "../component/empLayout"
 // import {} from "tw-elements"
 // import dynamic from "next/dynamic";
 // Initialization htmlFor ES Users
@@ -33,6 +31,7 @@ export default function mngCustomers() {
     try{
       const response = await axios.get(tableAddress);
       setData(response.data);
+      console.log(data);
     }
     catch(e){
       console.log(e);
@@ -132,7 +131,7 @@ export default function mngCustomers() {
 
   return (
     <>
-    <MyLayout title="Manage Customers"/>
+    <EmpLayout title="Manage Customers"/>
     <p>{deleteMsg}</p>
     <p>{deleted}</p>
     <p>{called}</p>

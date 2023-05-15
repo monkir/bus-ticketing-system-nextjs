@@ -1,16 +1,13 @@
 import MyLayout from "../../../component/layout"
-import Header from "../../../component/header"
-import Link from "next/link"
 import React from 'react';
-import { useForm } from 'react-hook-form';
 import axios from "axios";
-import { useState } from "react";
+import EmpLayout from "../../component/empLayout";
 
 export default function editcustomer({data}) {
   console.log(data);
   return (
     <>
-    <MyLayout title="Employee Signup"/>
+    <EmpLayout title="Employee Signup"/>
     <h1>Success</h1>
     <h1>Row affected: {data.affected}</h1>
     </>

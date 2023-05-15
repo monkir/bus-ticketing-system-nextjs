@@ -4,10 +4,12 @@ import Link from "next/link"
 import { useForm } from 'react-hook-form';
 import axios from "axios";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function addbusowners() {
   const [success, setSuccess] = useState('');
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const router=useRouter()
   const onSubmit = async data => {
     const formData= new FormData();
     // formData.JSON=data;
@@ -37,6 +39,7 @@ export default function addbusowners() {
       setSuccess("busowner is added successfully")
       reset();
       console.log(response);
+      router.back();
     }
     catch(e){
       console.log("error");

@@ -4,11 +4,12 @@ import Link from "next/link"
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function mngCustomers() {
   const [loginMessage, setLoginMessage]=useState('');
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  // const onSubmit = data => console.log(data);
+  const router = useRouter();
   const onSubmit = async data => {
     try{
       const response=await axios.post(
@@ -22,7 +23,10 @@ export default function mngCustomers() {
       if(response.data.message=="success")
         {
           sessionStorage.setItem("email", data.email);
-          setLoginMessage(sessionStorage.getItem("email"));
+          sessionStorage.setItem("name", response.data.name);
+          sessionStorage.setItem("image", response.data.image);
+          setLoginMessage(sessionStorage.getItem("image"));
+          router.push("./")
           reset();
         }
     }
@@ -80,10 +84,6 @@ export default function mngCustomers() {
                         {errors.password?.message}
                       </p>
                   </div>
-
-
-
-                  
                   
                   <div class="flex items-center justify-between">
                       <div class="flex items-start">

@@ -34,6 +34,8 @@ export default function editbusowner({data1}) {
         email: data1.email,
         phone: data1.phone,
         address: data1.address,
+        brtalicense: data1.brtalicense,
+        account: data1.account
       }
     }
   );
@@ -51,7 +53,9 @@ export default function editbusowner({data1}) {
       "name": data.name,
       "email": data.email,
       "phone": data.phone,
-      "address": data.address
+      "address": data.address,
+      "brtalicense": data.brtalicense,
+      "account": data.account
     }
     try{
       const response=await axios.put(
@@ -80,10 +84,10 @@ export default function editbusowner({data1}) {
     </div>
     <ul key={data1.id}>
         <li>ID: {data1.id}</li>
-        <li>Name: {data1.name}</li>
+        {/* <li>Name: {data1.name}</li>
         <li>Email: {data1.email}</li>
         <li>Phone: {data1.phone}</li>
-        <li>Address: {data1.address}</li>
+        <li>Address: {data1.address}</li> */}
       </ul>
     <h1>{success}</h1>
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -93,6 +97,10 @@ export default function editbusowner({data1}) {
       <span>{errors.email?.message}</span><br/>
       <input type="tel"  placeholder="phone" name="phone" {...register("phone", {required: {value: true, message: "Phone is required"}, pattern:{value: /^\d+$/, message: "phone must me numerical"}})} />
       <span>{errors.phone?.message}</span><br/>
+      <input type="tel" placeholder="account" {...register("account", {required: {value: true, message: "account is required"}, pattern:{value: /^\d+$/, message: "account must me numerical"}})} />
+      <span>{errors.account?.message}</span><br/>
+      <input type="text" placeholder="brtalicense" {...register("brtalicense", {required: {value: true, message: "brtalicense is required"}})} />
+      <span>{errors.brtalicense?.message}</span><br/>
       <textarea name="address"  {...register("address", {required: {value: true, message: "address is required"}})} />
       <span>{errors.address?.message}</span><br/>
       <input type="submit" />

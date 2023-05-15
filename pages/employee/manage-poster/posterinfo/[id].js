@@ -2,13 +2,13 @@ import Link from "next/link"
 import axios from "axios"
 import Image from "next/image"
 import EmpLayout from "../../component/empLayout"
-export default function mngCustomers({data}) {
+export default function mngposters({data}) {
   return (
     <>
     
-    <EmpLayout title="Manage Customers"/>
+    <EmpLayout title="Manage posters"/>
     <div>
-      <Link href={"/employee/manage-customer/add-customer"}>Add Customer</Link>
+      <Link href={"/employee/manage-poster/add-poster"}>Add poster</Link>
       
       <ul key={data.id}>
         <li>ID: {data.id}</li>
@@ -27,8 +27,8 @@ export default function mngCustomers({data}) {
 export async function getServerSideProps(context) {
     const pid=context.params.id;
    
-       const response = await axios.get('http://localhost:3000/employee/findcustomer/'+pid);
-      // const response = await fetch('http://localhost:3000/employee/findcustomer/'+id);
+       const response = await axios.get('http://localhost:3000/employee/findposter/'+pid);
+      // const response = await fetch('http://localhost:3000/employee/findposter/'+id);
        const data = await response.data;
       
    return { props: { data } }
