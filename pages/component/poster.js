@@ -21,7 +21,7 @@ export default function  Poster () {
     <div >
       {/* poster begin */}
     <div className=" flex justify-center">
-      <div id="gallery" className="relative w-3/4" data-carousel="slide">
+      <div id="gallery" className="relative w-1/2" data-carousel="slide">
           {/* <!-- Carousel wrapper --> */}
           <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
               {/* <!-- Item 1 --> */}

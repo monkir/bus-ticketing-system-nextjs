@@ -132,15 +132,15 @@ export default function mngCustomers() {
   return (
     <>
     <EmpLayout title="Manage Customers"/>
-    <p>{deleteMsg}</p>
+    {/* <p>{deleteMsg}</p>
     <p>{deleted}</p>
     <p>{called}</p>
-    <p>{tableAddress}</p>
+    <p>{tableAddress}</p> */}
     <div>
-      <Link href={"/employee/manage-customer/add-customer"}>Add Customer</Link>
+      {/* <Link href={"/employee/manage-customer/add-customer"}>Add Customer</Link>
       <p>{email}</p>
       <button onClick={()=>{Router.reload()}} >Reload</button><br/>
-      <button onClick={()=>{reload()}} >Refresh table</button>
+      <button onClick={()=>{reload()}} >Refresh table</button> */}
       
 
       <section className="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">

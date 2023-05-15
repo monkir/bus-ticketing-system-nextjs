@@ -1,9 +1,4 @@
-import MyLayout from "../../component/layout"
-import Header from "../../component/header"
-import Link from "next/link"
-import { useForm } from 'react-hook-form';
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { Modal } from "flowbite-react";
 
 export default function addCustomers() {

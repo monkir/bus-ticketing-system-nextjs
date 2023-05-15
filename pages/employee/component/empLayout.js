@@ -95,7 +95,7 @@ export default function EmpLayout(props)
 
   {/* <Poster/> */}
 
-<Navbar.Link href="/">
+{/* <Navbar.Link href="/">
   asdfsdf
    
 </Navbar.Link>
@@ -107,7 +107,7 @@ export default function EmpLayout(props)
   <Link href="#"> Manage Employee</Link>|
   <Link href="/employee/signup"> Emplyee signup</Link>|
   <Link href="/employee/login"> Emplyee login</Link>|
-  <Link href="/employee/logout"> Emplyee logout</Link>|
+  <Link href="/employee/logout"> Emplyee logout</Link>| */}
 
 
   {/* <div>
