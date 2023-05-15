@@ -208,7 +208,7 @@ export default function mngbusowners({data}) {
 
 export async function getServerSideProps() {
    
-  const response = await axios.get('http://localhost:3000/employee/showbusowners');
+  const response = await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/showbusowners');
   const data = await response.data;
   // const data=[
   //   {

@@ -13,7 +13,7 @@ export default function mngCustomers() {
   const onSubmit = async data => {
     try{
       const response=await axios.post(
-        "http://localhost:3000/employee/login",
+        "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/login",
         {"email": data.email, "password": data.password}
       );
       console.log(response);

@@ -7,8 +7,8 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
+        protocol: 'https',
+        hostname: 'https://bus-ticketing-system-nestjs-production.up.railway.app/',
         port: '3000',
       },
     ],

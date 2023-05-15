@@ -15,8 +15,8 @@ export default function editcustomer({data}) {
 }
 export async function getServerSideProps(context) {
     const id=context.params.id;
-       const response = await axios.delete('http://localhost:3000/employee/deletecustomer/'+id);
-      // const response = await fetch('http://localhost:3000/employee/findcustomer/'+id);
+       const response = await axios.delete('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/deletecustomer/'+id);
+      // const response = await fetch('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/findcustomer/'+id);
        const data = await response.data;
    return { props: { data } }
    }

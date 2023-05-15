@@ -23,7 +23,7 @@ export default function addCustomers() {
 
     try{
       const response=await axios.post(
-        "http://localhost:3000/employee/signup",
+        "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/signup",
         formData, 
         {
           headers: {
@@ -207,7 +207,7 @@ export default function addCustomers() {
 
 //     try{
 //       const response=await axios.post(
-//         "http://localhost:3000/employee/addcustomer",
+//         "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/addcustomer",
 //         formData, 
 //         {
 //           headers: {

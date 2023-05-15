@@ -47,7 +47,7 @@ export default function EmpLayout(props)
         <Dropdown
           arrowIcon={false}
           inline={true}
-        label={<Avatar alt="User settings" img={"http://localhost:3000/employee/getimage/"+image} rounded={true}/>}
+        label={<Avatar alt="User settings" img={"https://bus-ticketing-system-nestjs-production.up.railway.app/employee/getimage/"+image} rounded={true}/>}
         >
           <Dropdown.Header>
             <span className="block text-sm">

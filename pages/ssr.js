@@ -17,7 +17,7 @@ export default function SSR({ data }) {
     
    export async function getServerSideProps() {
    
-        const response = await fetch('http://localhost:3000/employee/showcustomers');
+        const response = await fetch('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/showcustomers');
         const data = await response.json();
       
     return { props: { data } }

@@ -20,7 +20,7 @@ export default function addposter() {
 
     try{
       const response=await axios.post(
-        "http://localhost:3000/employee/addposter",
+        "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/addposter",
         formData, 
         {
           headers: {

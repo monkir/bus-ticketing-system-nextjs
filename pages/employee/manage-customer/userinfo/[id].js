@@ -27,8 +27,8 @@ export default function mngCustomers({data}) {
 export async function getServerSideProps(context) {
     const pid=context.params.id;
    
-       const response = await axios.get('http://localhost:3000/employee/findcustomer/'+pid);
-      // const response = await fetch('http://localhost:3000/employee/findcustomer/'+id);
+       const response = await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/findcustomer/'+pid);
+      // const response = await fetch('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/findcustomer/'+id);
        const data = await response.data;
       
    return { props: { data } }

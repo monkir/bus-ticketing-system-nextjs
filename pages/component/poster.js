@@ -5,7 +5,7 @@ export default function  Poster () {
     var [data, setData]=useState([]);
     const loadData=async ()=>{
       try{
-        const response= await axios.get('http://localhost:3000/posters/showposters');
+        const response= await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/posters/showposters');
         setData(await response.data);
       }
       catch(e){
@@ -27,13 +27,13 @@ export default function  Poster () {
               {/* <!-- Item 1 --> */}
               {data.map(item=>(
                 <div key={item.id} className="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src={"http://localhost:3000/employee/getimage/"+item.image} className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=""/>
+                  <img src={"https://bus-ticketing-system-nestjs-production.up.railway.app/employee/getimage/"+item.image} className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=""/>
                 </div>
               ))}
               
               {/* <!-- Item 1 --> */}
               {/* <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img src="http://localhost:3000/employee/getimage/1684050696953maxresdefault.jpg" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=""/>
+                  <img src="https://bus-ticketing-system-nestjs-production.up.railway.app/employee/getimage/1684050696953maxresdefault.jpg" className="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt=""/>
               </div> */}
               {/* <!-- Item 2 --> */}
               <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
@@ -68,7 +68,7 @@ export default function  Poster () {
 
 // export async function getServerSideProps() {
    
-//     const response = await axios.get('http://localhost:3000/posters/showposters');
+//     const response = await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/posters/showposters');
 //     const data = await response.data;
   
 // return { props: { data } }

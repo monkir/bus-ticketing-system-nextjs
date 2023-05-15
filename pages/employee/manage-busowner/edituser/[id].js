@@ -59,7 +59,7 @@ export default function editbusowner({data1}) {
     }
     try{
       const response=await axios.put(
-        "http://localhost:3000/employee/updatebusowner",
+        "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/updatebusowner",
         content,
       );
       console.log(response);
@@ -113,8 +113,8 @@ export default function editbusowner({data1}) {
 export async function getServerSideProps(context) {
     const id=context.params.id;
    
-       const response = await axios.get('http://localhost:3000/employee/findbusowner/'+id);
-      // const response = await fetch('http://localhost:3000/employee/findbusowner/'+id);
+       const response = await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/findbusowner/'+id);
+      // const response = await fetch('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/findbusowner/'+id);
        const data1 = await response.data;
       
    return { props: { data1 } }

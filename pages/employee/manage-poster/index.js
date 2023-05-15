@@ -113,7 +113,7 @@ export default function mngposters({data}) {
                         <tr className="border-b dark:border-gray-700">
                             <th scope="row" className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.id}</th>
                             <td className="px-4 py-3">
-                              <img src={"http://localhost:3000/employee/getimage/"+item.image}></img>
+                              <img src={"https://bus-ticketing-system-nestjs-production.up.railway.app/employee/getimage/"+item.image}></img>
                             </td>
                             <td className="px-4 py-3 flex items-center justify">
                                 
@@ -207,7 +207,7 @@ export default function mngposters({data}) {
 
 export async function getServerSideProps() {
    
-  const response = await axios.get('http://localhost:3000/employee/showposters');
+  const response = await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/showposters');
   const data = await response.data;
   // const data=[
   //   {

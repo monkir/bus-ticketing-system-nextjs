@@ -23,7 +23,7 @@ export default function mngCustomers() {
   const [deleted, setDeleted]=useState(0);
   const [called, setCalled]=useState(0);
   const [did, setDid]=useState("");
-  const [tableAddress, setTableAddress]=useState('http://localhost:3000/employee/showcustomers')
+  const [tableAddress, setTableAddress]=useState('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/showcustomers')
 // const DynamicDatepicker = dynamic(() => import("/employee/manage-customer/add-customer"), { ssr: false });
   var [data, setData]=useState([]);
 
@@ -40,10 +40,10 @@ export default function mngCustomers() {
   const searchPassenger=async (event)=>{
     const value= event.target.value;
     if(value==""){
-      setTableAddress('http://localhost:3000/employee/showcustomers');
+      setTableAddress('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/showcustomers');
     }
     else{
-      setTableAddress('http://localhost:3000/employee/searchcustomer/'+value)
+      setTableAddress('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/searchcustomer/'+value)
     }
     await reload();
   }
@@ -62,7 +62,7 @@ export default function mngCustomers() {
   const [deleteMsg, setDeleteMsg]= useState("Nothing to delete now");
   const deleteCustomer=async ()=>{
     try{
-      const response = await axios.delete('http://localhost:3000/employee/deletecustomer/'+did);
+      const response = await axios.delete('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/deletecustomer/'+did);
       console.log(response.data) ;
       setDeleteMsg(
         <>
@@ -100,7 +100,7 @@ export default function mngCustomers() {
 
     try{
       const response=await axios.post(
-        "http://localhost:3000/employee/addcustomer",
+        "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/addcustomer",
         formData, 
         {
           headers: {
@@ -502,7 +502,7 @@ export default function mngCustomers() {
    
 //   // let data=[];
 //   // try{
-//   //   const response = await axios.get('http://localhost:3000/employee/showcustomers');
+//   //   const response = await axios.get('https://bus-ticketing-system-nestjs-production.up.railway.app/employee/showcustomers');
 //   //   data = response.data;
 //   //   console.log("runned");
 //   // }

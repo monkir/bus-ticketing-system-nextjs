@@ -33,7 +33,7 @@ export default function addbusowners() {
 
     try{
       const response=await axios.post(
-        "http://localhost:3000/employee/addbusowner",
+        "https://bus-ticketing-system-nestjs-production.up.railway.app/employee/addbusowner",
         content
       );
       setSuccess("busowner is added successfully")
